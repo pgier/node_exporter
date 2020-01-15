@@ -18,6 +18,7 @@ package collector
 import (
 	"fmt"
 	"path/filepath"
+	"runtime"
 	"strconv"
 
 	"github.com/prometheus/client_golang/prometheus"
@@ -90,7 +91,7 @@ func NewCPUCollector() (Collector, error) {
 
 // Update implements Collector and exposes cpu related metrics from /proc/stat and /sys/.../cpu/.
 func (c *cpuCollector) Update(ch chan<- prometheus.Metric) error {
-	if *enableCPUInfo {
+	if *enableCPUInfo && (runtime.GOARCH == "amd64") {
 		if err := c.updateInfo(ch); err != nil {
 			return err
 		}
