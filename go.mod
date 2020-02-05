@@ -26,7 +26,11 @@ require (
 	github.com/soundcloud/go-runit v0.0.0-20150630195641-06ad41a06c4a
 	golang.org/x/crypto v0.0.0-20181009213950-7c1a557ab941 // indirect
 	golang.org/x/net v0.0.0-20181005035420-146acd28ed58 // indirect
-	golang.org/x/sync v0.0.0-20181108010431-42b317875d0f // indirect
+	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 	golang.org/x/sys v0.0.0-20181005133103-4497e2df6f9e
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 )
+
+replace github.com/prometheus/procfs => github.com/pgier/procfs v0.0.0-20200205031623-eb9b72887e8b
+
+go 1.13
