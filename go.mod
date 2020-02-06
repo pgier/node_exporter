@@ -1,5 +1,7 @@
 module github.com/prometheus/node_exporter
 
+go 1.12
+
 require (
 	github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc // indirect
 	github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf // indirect
@@ -32,5 +34,3 @@ require (
 )
 
 replace github.com/prometheus/procfs => github.com/pgier/procfs v0.0.0-20200205031623-eb9b72887e8b
-
-go 1.13
